@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Un regalo para ti ❤️</title>
+<meta name="theme-color" content="#f8e9e9">
+<style>
+:root{--bg:#fbf3f0;--card:#fffaf7;--ink:#594544;--muted:#927b78;--accent:#b86f70;--accent2:#dba4a0;--shadow:0 18px 50px rgba(94,61,58,.13)}
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:linear-gradient(135deg,#f7e8e7,#fff8f3 55%,#f4e4e2)}
+body{display:flex;justify-content:center}.app{width:min(100%,480px);min-height:100vh;padding:22px 18px 34px;position:relative;overflow:hidden}
+.screen{min-height:calc(100vh - 56px);display:none;align-items:center;justify-content:center;animation:in .6s ease}.screen.active{display:flex}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.glow{position:absolute;width:220px;height:220px;border-radius:50%;background:#fff;filter:blur(45px);opacity:.65;top:-70px;right:-80px;pointer-events:none}
+.card{width:100%;background:rgba(255,250,247,.9);border:1px solid rgba(184,111,112,.16);border-radius:28px;padding:28px 22px;box-shadow:var(--shadow);text-align:center}
+.kicker{font:600 11px/1.2 Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:35px;line-height:1.08;font-weight:500;margin:13px 0 12px} h2{font-size:29px;font-weight:500;margin:8px 0 18px}.sub{font-size:16px;line-height:1.7;color:#806c69}
+button{border:0;border-radius:999px;padding:14px 22px;background:var(--accent);color:white;font:600 14px Arial,sans-serif;cursor:pointer;box-shadow:0 9px 24px rgba(184,111,112,.25);transition:.2s}button:hover{transform:translateY(-2px)}button.ghost{background:transparent;color:var(--accent);box-shadow:none;border:1px solid rgba(184,111,112,.35)}
+.cover{padding:34px 24px}.seal{width:86px;height:86px;border-radius:50%;margin:8px auto 24px;display:grid;place-items:center;background:#fff;border:1px solid #e7c9c7;font-size:37px;box-shadow:0 12px 30px rgba(94,61,58,.12)}
+.qr{width:176px;height:176px;margin:22px auto;background:white;border:10px solid white;box-shadow:0 10px 28px rgba(0,0,0,.09);display:grid;grid-template-columns:repeat(13,1fr);gap:3px;padding:3px}
+.qr i{background:#5b4a49;border-radius:1px}.qr i:nth-child(3n){background:#fff}.qr i:nth-child(7n){background:#6f5958}
+.qr-real {
+    width: 176px;
+    height: 176px;
+    object-fit: contain;
+    display: block;
+    margin: 22px auto;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 10px 28px rgba(0,0,0,.09);
+}
+.fake-note{font:12px Arial,sans-serif;color:#9a8582;margin-top:10px}
+.photo{aspect-ratio:4/5;border-radius:20px;overflow:hidden;margin:0 auto 18px;position:relative;background:linear-gradient(145deg,#e8c6c3,#f8e9df 50%,#d7a7a4);display:grid;place-items:center}
+.photo:before{display:none}.photo img{width:100%;height:100%;object-fit:cover;display:block}.final-photo{overflow:hidden}.final-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo span{position:absolute;font:600 13px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8e6e6c}
+.caption{font-size:14px;color:#907875;margin:0 0 18px}.dots{display:flex;gap:6px;justify-content:center;margin:12px 0 20px}.dot{width:7px;height:7px;border-radius:50%;background:#e1c6c3}.dot.on{background:var(--accent)}
+.letter{text-align:left;background:#fffdf9;border-radius:18px;padding:23px;line-height:1.8;font-size:16px;box-shadow:inset 0 0 0 1px #eee0d7}.letter p{margin:0 0 13px}.signature{text-align:right;font-style:italic;color:var(--accent)}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:24px 0}.unit{background:#fff;border-radius:15px;padding:12px 5px;border:1px solid #ead9d4}.num{font-size:26px}.lab{font:10px Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em;color:#9a8582}
+.final-photo{aspect-ratio:1;border-radius:50%;width:min(270px,75vw);margin:18px auto;background:linear-gradient(145deg,#d6a19f,#f5d9cf 52%,#b87978);display:grid;place-items:center;box-shadow:0 20px 50px rgba(94,61,58,.18);border:8px solid rgba(255,255,255,.7)}
+.final-photo span{font:600 13px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:white}
+.footer{font:11px Arial,sans-serif;color:#a58f8c;margin-top:20px}
+.back{margin-top:14px}
+.music{position:fixed;right:18px;bottom:18px;width:44px;height:44px;padding:0;z-index:5}
+@media(max-height:700px){.screen{min-height:auto;padding:12px 0}.card{padding:22px 18px}h1{font-size:30px}}
+.photo img{object-position:center}.final-photo img{object-position:center}\n</style>
+</head>
+<body>
+<main class="app">
+<div class="glow"></div>
+
+<section class="screen active" id="s0"><div class="card cover">
+  <div class="kicker">Has recibido un regalo</div>
+  <div class="seal">♡</div>
+  <h1>Hay algo especial<br>esperándote</h1>
+  <p class="sub">Escanea el código de tu tarjeta y descubre cada recuerdo, uno a uno.</p>
+  <img src="fotos/qr-code.png" alt="Código QR" class="qr-real">
+  <button onclick="go(1)" style="margin-top:22px">Abrir mi regalo ✨</button>
+</div></section>
+
+<section class="screen" id="s1"><div class="card">
+  <div class="kicker">Para ti</div><h2>¿Preparad@?</h2>
+  <p class="sub">He guardado aquí algunas cosas que quiero volver a vivir contigo.</p>
+  <button onclick="go(2)">Quiero verlo ❤️</button>
+</div></section>
+
+<section class="screen" id="s2"><div class="card">
+  <div class="kicker">Recuerdo 01</div><h2>El comienzo</h2>
+  <div class="photo"><img src="fotos/recuerdo1.JPEG" alt="s2"></div>
+  <p class="caption">“Y pensar que todo empezó con un momento tan sencillo…”</p>
+  <div class="dots"><i class="dot on"></i><i class="dot "></i><i class="dot "></i><i class="dot "></i><i class="dot "></i><i class="dot "></i></div>
+  <button onclick="go(3)">Siguiente →</button>
+</div></section>
+
+<section class="screen" id="s3"><div class="card">
+  <div class="kicker">Recuerdo 02</div><h2>Primeros momentos</h2>
+  <div class="photo"><img src="fotos/recuerdo2.JPEG" alt="s3"></div>
+  <p class="caption">“Hay recuerdos que se quedan para siempre.”</p>
+  <div class="dots"><i class="dot "></i><i class="dot on"></i><i class="dot "></i><i class="dot "></i><i class="dot "></i><i class="dot "></i></div>
+  <button onclick="go(4)">Siguiente →</button>
+</div></section>
+
+<section class="screen" id="s4"><div class="card">
+  <div class="kicker">Recuerdo 03</div><h2>Nuestras aventuras</h2>
+  <div class="photo"><img src="fotos/recuerdo03.JPEG" alt="s2"></div>
+  <p class="caption">“Que nunca nos falten lugares a los que ir.”</p>
+  <div class="dots"><i class="dot "></i><i class="dot "></i><i class="dot on"></i><i class="dot "></i><i class="dot "></i><i class="dot "></i></div>
+  <button onclick="go(5)">Siguiente →</button>
+</div></section>
+
+<section class="screen" id="s5"><div class="card">
+  <div class="kicker">Recuerdo 04</div><h2>Días especiales</h2>
+  <div class="photo"><img src="fotos/recuerdo04.JPEG" alt="Recuerdo 4"></div>
+  <p class="caption">“Los pequeños detalles hacen grande nuestra historia.”</p>
+  <div class="dots"><i class="dot "></i><i class="dot "></i><i class="dot "></i><i class="dot on"></i><i class="dot "></i><i class="dot "></i></div>
+  <button onclick="go(6)">Siguiente →</button>
+</div></section>
+
+<section class="screen" id="s6"><div class="card">
+  <div class="kicker">Recuerdo 05</div><h2>Risas y locuras</h2>
+  <div class="photo"><img src="fotos/recuerdo05.JPEG" alt="Recuerdo 5"></div>
+  <p class="caption">“Contigo hasta los días normales se vuelven especiales.”</p>
+  <div class="dots"><i class="dot "></i><i class="dot "></i><i class="dot "></i><i class="dot "></i><i class="dot on"></i><i class="dot "></i></div>
+  <button onclick="go(7)">Siguiente →</button>
+</div></section>
+
+<section class="screen" id="s7"><div class="card">
+  <div class="kicker">Recuerdo 06</div><h2>Lo que nos queda</h2>
+  <div class="photo"><img src="fotos/recuerdo06.JPEG" alt="Recuerdo 6"></div>
+  <p class="caption">“Y todavía nos quedan muchísimas historias por escribir.”</p>
+  <div class="dots"><i class="dot "></i><i class="dot "></i><i class="dot "></i><i class="dot "></i><i class="dot "></i><i class="dot on"></i></div>
+  <button onclick="go(8)">Hay una carta para ti 💌</button>
+</div></section>
+
+<section class="screen" id="s8"><div class="card">
+  <div class="kicker">Una carta</div><h2>Lo que quería decirte</h2>
+  <div class="letter">
+    <p>Bella flor,</p>
+    <p>Sí estás leyendo esto es porque has llegado hasta el final de este pequeño viaje. Quería recordarte lo importante que eres para mí y agradecerte todos esos momentos que hemos compartido.</p>
+    <p>Ojalá podamos seguir llenando nuestra historia de viajes, risas, abrazos y recuerdos que solo nosotros entendemos.</p>
+    <p>Gracias por ser tú. ❤️</p>
+    <p class="signature">Con todo mi amor</p>
+  </div>
+  <button onclick="go(9)" style="margin-top:20px">Una última sorpresa →</button>
+</div></section>
+
+<section class="screen" id="s9"><div class="card">
+  <div class="kicker">Desde nuestro día</div><h2>El tiempo que llevamos juntos</h2>
+  <div class="counter"><div class="unit"><div class="num" id="days">0</div><div class="lab">días</div></div><div class="unit"><div class="num" id="hours">0</div><div class="lab">horas</div></div><div class="unit"><div class="num" id="mins">0</div><div class="lab">min</div></div><div class="unit"><div class="num" id="secs">0</div><div class="lab">seg</div></div></div>
+  <button onclick="go(10)">Y esto no termina aquí…</button>
+</div></section>
+
+<section class="screen" id="s10"><div class="card">
+  <div class="kicker">Para siempre</div>
+  <div class="final-photo"><img src="fotos/recuerdofinal.JPEG" alt="Nuestra foto final"></div>
+  <h2>Te elegiría otra vez.</h2>
+  <p class="sub">Gracias por formar parte de mi historia.</p>
+  <button onclick="go(1)">Volver a empezar ↻</button>
+  <div class="footer">Hecho con ♥ para alguien especial</div>
+</div></section>
+
+<button class="music" id="musicBtn" onclick="toggleMusic()" title="Música">♫</button>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
