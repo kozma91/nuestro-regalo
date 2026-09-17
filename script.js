@@ -24,6 +24,14 @@ setInterval(updateCounter,1000); updateCounter();
 
 // QR visual decorativo para la demo
 
-function toggleMusic(){
-  alert("Puedes añadir tu canción en un <audio> dentro de index.html. Los navegadores suelen exigir que el usuario toque primero la pantalla.");
+function toggleMusic() {
+    const musica = document.getElementById("musica");
+
+    if (musica.paused) {
+        musica.play();
+        document.getElementById("musicBtn").textContent = "❚❚";
+    } else {
+        musica.pause();
+        document.getElementById("musicBtn").textContent = "♫";
+    }
 }
